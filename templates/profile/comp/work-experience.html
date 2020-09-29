@@ -1,0 +1,14 @@
+{% load static %}
+<div class="work section second" id="experiences">
+        <div class="container">
+            <h1>Work<br>Experiences</h1>
+            {% for expe in user %}
+                <ul class="work-list">
+                    <li>{{ expe.time_line }}</li>
+                    <li><a href="{{ expe.website }}">{{ expe.location }}</a></li>
+                    <li>{{ expe.job }}</li>
+                </ul>
+            {% endfor %}
+
+        </div>
+    </div>

@@ -1,0 +1,16 @@
+{% load static %}
+<div class="skills section second" id="skills">
+    <div class="container">
+        <h1>Technical<br>Skills</h1>
+        {% for tech in user %}
+            <ul class="skill-list list-flat">
+                <li>{{ tech.category }}</li>
+                <li>{{ tech.skill }}</li>
+            </ul>
+        {% endfor %}
+
+    </div>
+</div>
+
+
+</div>

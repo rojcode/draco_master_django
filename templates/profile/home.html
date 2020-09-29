@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>I'm {{ intro.user.username }}</title>
+    {% include "profile/ref/header.html" %}
+</head>
+<body>
+<div class="main-nav">
+    {% include "profile/comp/header.html" %}
+</div>
+
+{% include "profile/comp/Introduction.html" with user=intro %}
+{% include "profile/comp/work-experience.html" with user=intro.works.all %}
+{% include "profile/comp/awards.html" with user=intro.awards.all %}
+{% include "profile/comp/technical-skills.html" with user=intro.skills.all %}
+
+<div class="quote">
+    <div class="container text-centered">
+        <h1>fight against the ugliness.</h1>
+    </div>
+</div>
+
+{% include "profile/ref/js_ref.html" %}
+</body>
+</html>

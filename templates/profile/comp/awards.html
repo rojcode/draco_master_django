@@ -1,0 +1,14 @@
+{% load static %}
+
+<div class="award section second" id="achievements">
+    <div class="container">
+        <h1>Award &amp;<br>Achievements</h1>
+        {% for awar in user %}
+            <ul class="award-list list-flat">
+                <li>{{ awar.time_line }}</li>
+                <li>{{ awar.des }}</li>
+            </ul>
+        {% endfor %}
+
+    </div>
+</div>
